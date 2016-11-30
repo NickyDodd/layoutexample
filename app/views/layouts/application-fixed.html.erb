@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>LayoutExample</title>
+ <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %> 
+</head>
+<body>
+<div id="header">
+    <!−− Header Image D i s p l a y e s he re −−>
+		<div id="menu">
+		<!−− Header Image D i s p l a y e s he re −−>
+		</div> 
+		<div id="navbar">
+			<ul>
+				<li><a href="/users">Home</a></li>
+				<li><a href="/books">Books</a></li>
+				<li><a href="/ebooks">eBooks</a></li>
+				<li><a href="/registers">Register</a></li>
+				<li><a href="/contacts">Contact</a></li>
+				<li><a href="/logins">Login</a></li>
+			</ul>
+		</div>
+	</div>
+<!-- 	<div id="container">Start of container -->
+		<div id="content"><!-- Start of content -->
+		<%= yield %>
+</div><!-- End of content -->
+		<div id="first-column"><!-- Start of first column -->
+			<div class="searchbox"><!-- Start of search box -->
+				<h2 class="BoxHeaders">Search</h2>
+				<input type="text" name="search" />
+				<input type="submit" value="Search"/>
+			</div><!-- End of search box -->
+		</div><!-- End of column -->
+		
+		<div class="box">
+			<h2 class="BoxHeaders">Special Offers</h2>
+			<img src="/assets/Books/Pict1.jpg" name="Rotating" id="Rotating1" alt="Special Offers  ">
+			<script type=”text/javascript”>RotateImages(1,0);
+			</script>
+		</div>
+		<div class="box">
+			<h2 class="BoxHeaders">Newly Published</h2>
+			<img src="/assets/Books/Pict1.jpg" alt="New Books">
+		</div>
+	</div><!-- End of container -->
+	<div id="footer"><!-- Start of footer-->
+		<h6> class="footertext">&copy; Online Stores NCI&trade; 2014</h6>
+	</div> 
+</body>
+</html>
